@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Budget</h2>
+<form method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.category.label }} {{ form.category() }}
+    </div>
+    <div>
+        {{ form.month.label }} {{ form.month(size=10) }}
+        <small>Format: YYYY-MM</small>
+    </div>
+    <div>
+        {{ form.amount.label }} {{ form.amount() }}
+    </div>
+    <div>
+        {{ form.submit(class_="btn") }}
+    </div>
+</form>
+
+<div class="centered-buttons">
+  <a href="{{ url_for('set_budget') }}" class="btn long-btn">Back to Budgets</a>
+  <a href="{{ url_for('dashboard') }}" class="btn long-btn">Back to Dashboard</a>
+</div>
+{% endblock %}

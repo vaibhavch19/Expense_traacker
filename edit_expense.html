@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Expense</h2>
+<form method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.description.label }} {{ form.description() }}
+    {{ form.amount.label }} {{ form.amount() }}
+    {{ form.date.label }} {{ form.date() }}
+    {{ form.category.label }} {{ form.category() }}
+
+    <div>
+        {{ form.receipt.label }} {{ form.receipt() }}
+        {% if expense.receipt_path %}
+            <div style="margin-top:8px;">
+                <strong>Current receipt:</strong><br>
+                <a href="{{ url_for('receipt_image', filename=expense.receipt_path) }}" target="_blank">
+                    <img src="{{ url_for('receipt_image', filename=expense.receipt_path) }}" 
+                         alt="Receipt" style="height:50px; border-radius:6px; border:1px solid #ccc;">
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+    {{ form.submit(class_="btn") }}
+</form>
+
+<div class="centered-buttons">
+  <a href="{{ url_for('dashboard') }}" class="btn long-btn">Back to Dashboard</a>
+</div>
+{% endblock %}

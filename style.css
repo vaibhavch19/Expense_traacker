@@ -1,0 +1,256 @@
+/* BODY AND BASE SETUP */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #d0e8f2, #9acde3);
+    color: #1a3365;
+    margin: 0;
+    padding: 30px 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* NAVIGATION */
+nav {
+    background: #0b3b67;
+    padding: 1.2rem 3rem;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0, 59, 100, 0.4);
+    text-align: center;
+}
+
+nav a {
+    color: #c6def7;
+    margin: 0 22px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.12rem;
+    transition: color 0.35s ease, text-shadow 0.35s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #ffce00;
+    text-shadow: 0 0 7px #ffce00;
+}
+
+/* CONTAINER (WRAPPING CONTENT) */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.3rem 3.2rem;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(9, 46, 100, 0.12);
+}
+
+/* HEADERS */
+h2, h3 {
+    font-weight: 900;
+    color: #003366;
+    margin-bottom: 1.2rem;
+}
+
+/* FORMS */
+form label {
+    display: block;
+    font-weight: 700;
+    margin-top: 1.4rem;
+    color: #005f99;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 15px 18px;
+    margin-top: 0.6rem;
+    border-radius: 10px;
+    border: 2.5px solid #9fc5e8;
+    font-size: 1.1rem;
+    background: #f3faff;
+    box-shadow: inset 0 1.3px 3px rgba(255,255,255,0.95);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 12px #ffcc00aa;
+    outline: none;
+}
+
+/* BUTTONS */
+.btn,
+button,
+input[type="submit"],
+form button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #004366 !important;
+    padding: 15px 24px;
+    margin-top: 2rem;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1.12rem;
+    text-align: center;
+    box-shadow: 0 7px 22px rgba(255, 204, 0, 0.65);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover,
+form button:hover,
+.btn:focus,
+button:focus,
+input[type="submit"]:focus,
+form button:focus {
+    background: #f0b800;
+    box-shadow: 0 9px 28px rgba(240, 184, 0, 0.85);
+    outline: none;
+}
+
+/* Remove visited color on buttons */
+.btn:visited,
+button:visited,
+input[type="submit"]:visited,
+.edit-btn:visited, 
+.edit-btn:active,
+a.btn:visited {
+    color: #004366 !important;
+    background: #ffcc00 !important;
+}
+
+/* Delete button styling with red color */
+.delete-btn {
+    background: #e63946;
+    color: #fff !important;
+    box-shadow: 0 8px 26px rgba(230, 57, 70, 0.7);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+    background: #b22234;
+    box-shadow: 0 11px 30px rgba(178, 34, 52, 0.9);
+    outline: none;
+}
+
+/* Container for Edit/Delete buttons alignment */
+.action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+.edit-btn, .delete-btn {
+    margin: 0;
+    min-width: 90px;
+    padding: 11px 18px;
+    height: 42px;
+    vertical-align: middle;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+}
+
+.action-btns form {
+    margin: 0;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 14px;
+    margin-top: 1.8rem;
+    background: #e1efff;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(12, 45, 78, 0.1);
+}
+
+thead th {
+    background: #0071bc;
+    color: #c6e1ff;
+    font-weight: 800;
+    font-size: 1.06rem;
+    padding: 14px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tbody td {
+    padding: 14px 22px;
+    background: #f5fbff;
+    color: #0a2d55;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(even) td {
+    background: #d7eaff;
+}
+
+tbody tr:hover td {
+    background: #c1daff;
+}
+
+/* FLASH MESSAGES */
+.flash {
+    font-weight: 800;
+    font-size: 1.12rem;
+    border-radius: 18px;
+    padding: 1rem 1.3rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 6px 22px rgb(0 75 170 / 0.15);
+    text-align: center;
+}
+
+.flash.success {
+    background: #dbf4db;
+    color: #1f7716;
+    border: 2px solid #77c34d;
+}
+
+.flash.error {
+    background: #fcdbdb;
+    color: #9e1c1c;
+    border: 2px solid #d95656;
+}
+
+.flash.warn {
+    background: #fff4d7;
+    color: #aa7d00;
+    border: 2px solid #ffcc00;
+}
+
+.flash.info {
+    background: #d6e9ff;
+    color: #2f539c;
+    border: 2px solid #70a1ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    nav a {
+        display: block;
+        margin: 0.6rem 0;
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding: 1.5rem 1.8rem;
+        margin: 0 10px;
+    }
+}

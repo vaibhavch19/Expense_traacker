@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="landing-hero">
+    <h1>Welcome to Smart Expense Tracker</h1>
+    <p class="tagline">Track, manage, and master your money with ease. Visualize budgets, upload receipts, and stay ahead of your goals!</p>
+    <div class="landing-btns">
+        <a href="{{ url_for('login') }}" class="btn landing-btn primary">Log In</a>
+        <a href="{{ url_for('register') }}" class="btn landing-btn secondary">Register</a>
+    </div>
+</div>
+{% endblock %}
